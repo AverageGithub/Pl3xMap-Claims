@@ -8,6 +8,7 @@ import java.util.function.Supplier;
 import libs.org.checkerframework.checker.nullness.qual.NonNull;
 import libs.org.checkerframework.checker.nullness.qual.Nullable;
 import net.pl3x.map.claims.hook.griefprevention.GPHook;
+import net.pl3x.map.claims.hook.kingdomsx.KingdomsXHook;
 import net.pl3x.map.claims.hook.worldguard.WGHook;
 import net.pl3x.map.core.markers.marker.Marker;
 import net.pl3x.map.core.world.World;
@@ -44,7 +45,8 @@ public interface Hook {
 
     enum Impl {
         GRIEF_PREVENTION("GriefPrevention", GPHook::new),
-        WORLD_GUARD("WorldGuard", WGHook::new);
+        WORLD_GUARD("WorldGuard", WGHook::new),
+        KINGDOMSX("KingdomsX", KingdomsXHook::new);
 
         private final String name;
         private final Supplier<@NonNull Hook> hook;
