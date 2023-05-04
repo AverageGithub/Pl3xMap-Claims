@@ -46,7 +46,7 @@ public interface Hook {
     enum Impl {
         GRIEF_PREVENTION("GriefPrevention", GPHook::new),
         WORLD_GUARD("WorldGuard", WGHook::new),
-        KINGDOMSX("KingdomsX", KingdomsXHook::new);
+        KINGDOMSX("Kingdoms", KingdomsXHook::new);
 
         private final String name;
         private final Supplier<@NonNull Hook> hook;
