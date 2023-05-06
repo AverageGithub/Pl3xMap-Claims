@@ -56,7 +56,7 @@ public class KingdomsXHook implements Listener, Hook {
 
     private @NonNull String processPopup(@NonNull String popup, @NonNull KingdomsXClaim claim) {
         return popup.replace("<world>", claim.getWorld().getName())
-                .replace("<id>", claim.getID().toString())
+                .replace("<id>", String.valueOf(claim.getID()))
                 .replace("<owner>", claim.getOwnerName());
     }
 }

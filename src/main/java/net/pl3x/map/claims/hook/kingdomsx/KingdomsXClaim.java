@@ -28,8 +28,8 @@ public class KingdomsXClaim {
         return this.world;
     }
 
-    public @NonNull UUID getID() {
-        return this.land.getKingdom().getId();
+    public @NonNull int getID() {
+        return this.land.hashCode();
     }
 
     public @NonNull String getOwnerName() {
@@ -45,6 +45,6 @@ public class KingdomsXClaim {
     }
 
     public Color getColor() {
-        return land.getKingdom().getColor();
+        return land.getKingdom() != null ? land.getKingdom().getColor() : Color.GREEN;
     }
 }
